@@ -1,7 +1,6 @@
 isComing = false;
 let timerId;
 
-
 const startButton = document.getElementById('start');
 startButton.addEventListener('click', function () {
     if (!isComing) {
@@ -9,7 +8,6 @@ startButton.addEventListener('click', function () {
     isComing = true;
 }
 });
-
 
 const stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
@@ -19,14 +17,11 @@ stopButton.addEventListener('click', function () {
 }
 });
 
-
-
 function updateClock() {
     const clock = document.getElementById('clock');
     const now = new Date();
-    console.log(now)
-    const hours = now.getHours()
-    const minutes = now.getMinutes()
-    const seconds = now.getSeconds()
+    const hours = now.getHours(); 
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
     clock.textContent = hours + ':' + minutes + ':' + seconds;
 }
